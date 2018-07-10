@@ -1,0 +1,131 @@
+html, body {
+   height: 100%;
+}
+
+body {
+    overflow:hidden;
+    margin: 0px;
+    padding: 0px;
+}
+
+.wrapper, .row {
+   height: 100%;
+   margin-left:0;
+   margin-right:0;
+}
+
+.wrapper:before, .wrapper:after,
+.column:before, .column:after {
+    content: "";
+    display: table;
+}
+
+.wrapper:after,
+.column:after {
+    clear: both;
+}
+
+#sidebar {
+    background: rgba(0, 0, 0, .8);
+    padding-left: 0;
+    padding-right: 0;
+    float: left;
+    min-height: 100%;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+
+}
+
+.brand {
+    background-color: #247ba0;
+    color: white;
+    line-height: 50px !important;
+    display: block;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+}
+#sidebar .collapse.in {
+    display: inline;
+}
+
+#sidebar > .nav>li>a {
+    white-space: nowrap;
+    color: white;
+}
+#sidebar > .nav>li>a:hover,
+#sidebar > .nav>li>a:focus {
+    background-color: #006494;
+  }
+
+#sidebar > .nav>li>a:active {
+  background-color: #006494;
+}
+
+#sidebar > .nav>li>ul>li>a:hover{
+  background-color: #006494;
+
+}
+#topnav{
+    background-color: #006494;
+    border-width: 0px;
+    border-radius: 0px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+#topnav .nav li a,
+#main i,
+#topnav ul li i{
+    color: #fff;
+
+}
+
+#main {
+    transition: margin-left 0.5s;
+    padding:0px;
+    left: 0;
+    min-height: 100%;
+
+}
+.main-content {
+    padding: 15px;
+    min-height: 100%;
+    width: 100%;
+}
+.display{
+    border: 3px double #006494;
+    height: 73%;
+    position: absolute;
+    width: 98%;
+    padding: 10px;
+}
+.navbar{
+    margin: 0;
+}
+footer {
+    position: absolute;
+    bottom: 10px;
+    color: #fff;
+    font-size: 14px;
+    width: 98%;
+    background: rgba(0, 0, 0, .5);
+    height: 15%;
+}
+
+#footer-copyrights p{
+   font-size: 18px;
+   font-weight: 500;
+}
+
+.display > .heading {
+  height: 10%;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: #001a2d;
+  font-size: 20px;
+  font-weight: 600;
+  border: 1px solid #006494;
+  border-radius: 10px;
+}

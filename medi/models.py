@@ -36,7 +36,7 @@ class MyUserManager(BaseUserManager):
         return user
 
 
-class MyUser(AbstractBaseUser, PermissionsMixin):
+class MyUser(PermissionsMixin, AbstractBaseUser):
     email = models.EmailField(
         verbose_name='email address',
         max_length=255,
@@ -73,9 +73,3 @@ class MyUser(AbstractBaseUser, PermissionsMixin):
 
     def get_short_name(self):
         return self.name
-
-    @property
-    def is_staff(self):
-        "Is the user a member of staff?"
-        # Simplest possible answer: All admins are staff
-        return self.is_admin
