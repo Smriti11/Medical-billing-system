@@ -7,7 +7,6 @@ body {
     margin: 0px;
     padding: 0px;
 }
-
 .wrapper, .row {
    height: 100%;
    margin-left:0;
@@ -128,4 +127,28 @@ footer {
   font-weight: 600;
   border: 1px solid #006494;
   border-radius: 10px;
+}
+.contentleft{
+  height:80%;
+}
+.contentright>.btn{
+  display: block;
+  width: 150px;
+  margin:10px 0px 10px 50px;
+}
+.contentbottom{
+  position: absolute;
+  bottom: 10px;
+  height:10%;
+  background-color: #d9edf7;
+  opacity: 0.9;
+}
+.contentbottom>.tot{
+  float: left;
+}
+.contentbottom>.tot>h4{
+  float: right;
+}
+.contentbottom>.totprice{
+  float: right;
 }

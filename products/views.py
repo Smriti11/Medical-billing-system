@@ -6,3 +6,6 @@ def products(request):
     'products':Products.objects.all()
     }
     return render(request,'products.html',context)
+
+def pos(request):
+    return render(request,'pos.html')
