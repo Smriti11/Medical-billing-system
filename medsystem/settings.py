@@ -43,6 +43,8 @@ INSTALLED_APPS = (
     'products',
     'django_tables2',
     'purchase',
+    'supplier',
+    'ckeditor',
 )
 
 MIDDLEWARE_CLASSES = [
