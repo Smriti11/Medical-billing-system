@@ -1,0 +1,15 @@
+{% extends 'master/index.html' %}
+{% load staticfiles %}
+{% block title %} Add purchase {% endblock %}
+{% block heading %} <p> Add purchase item </p> {% endblock %}
+{% block content %}
+<div class="puraddform">
+<form method="POST" action="{% url 'addpurchase' %}">
+  <table>
+  {{form.as_table}}
+  {% csrf_token %}
+  </table>
+  <button type="submit" class="btn btn-primary">ADD</button>
+</form>
+</div>
+{% endblock %}
