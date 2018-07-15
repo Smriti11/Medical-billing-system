@@ -8,20 +8,30 @@
         <li>
             <a href="#" data-target="#item2" data-toggle="collapse"><i class="fa fa-barcode"></i> <span class="collapse in hidden-xs">Inventory <span class="caret"></span></span></a>
             <ul class="nav nav-stacked collapse" id="item2">
-                <li><a href="{% url 'products' %}">List</a></li>
-                <li><a href="#">Add Product</a></li>
-                <li><a href="{% url 'purchase' %}">Purchase</a></li>
-                <li><a href="{% url 'stockreturn' %}">Stock Return</a></li>
+                <li><a href="{% url 'products' %}">o List</a></li>
+                <li><a href="{% url 'addproduct' %}">o Add Product</a></li>
+                <li><a href="{% url 'purchase' %}">o Purchase</a></li>
+                <li><a href="{% url 'addpurchase' %}">o Add Purchase</a></li>
+                <li><a href="#">o Stock Return</a></li>
+                <li><a href="#">o Add Stock Return Item</a></li>
             </ul>
         </li>
         <li>
             <a href="#" data-target="#item1" data-toggle="collapse"><i class="fa fa-clipboard-list"></i> <span class="collapse in hidden-xs">Category <span class="caret"></span></span></a>
             <ul class="nav nav-stacked collapse left-submenu" id="item1">
-                <li><a href="#">abc</a></li>
-                <li><a href="#">xyz</a></li>
+                <li><a href="#">o Prescription Drugs</a></li>
+                <li><a href="#">o Skin care</a></li>
+                <li><a href="#">o Oral Drugs</a></li>
+                <li><a href="#">o Other supplies</a></li>
             </ul>
         </li>
-        <li><a href="{% url 'supplier' %}"><i class="fa fa-male"></i> <span class="collapse in hidden-xs">Suppliers</span></a></li>
+        <li>
+          <a href="#" data-target="#item" data-toggle="collapse"><i class="fa fa-male"></i> <span class="collapse in hidden-xs">Suppliers <span class="caret"></span></span></a>
+          <ul class="nav nav-stacked collapse left-submenu" id="item">
+              <li><a href="#">o List Suppliers</a></li>
+              <li><a href="#">o Add Suppliers</a></li>
+          </ul>
+        </li>
         <li><a href="#"><i class="fa fa-cart-plus"></i> <span class="collapse in hidden-xs">Sales</span></a></li>
         <li><a href="#"><i class="fa fa-chart-bar"></i> <span class="collapse in hidden-xs">Report</span></a></li>
     </ul>

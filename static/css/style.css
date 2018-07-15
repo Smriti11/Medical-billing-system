@@ -7,6 +7,9 @@ body {
     margin: 0px;
     padding: 0px;
 }
+a{
+  color: #fff;
+}
 .wrapper, .row {
    height: 100%;
    margin-left:0;
@@ -51,7 +54,7 @@ body {
 
 #sidebar > .nav>li>a {
     white-space: nowrap;
-    color: white;
+    color: #fff;
 }
 #sidebar > .nav>li>a:hover,
 #sidebar > .nav>li>a:focus {
@@ -62,8 +65,10 @@ body {
   background-color: #006494;
 }
 
-#sidebar > .nav>li>ul>li>a:hover{
-  background-color: #006494;
+#sidebar > .nav>li>ul>li>a:hover,
+#sidebar > .nav>li>ul>li>a:focus{
+  background: rgba(0, 0, 0, .5);
+  color: #fff;
 
 }
 #topnav{
@@ -99,6 +104,7 @@ body {
     position: absolute;
     width: 98%;
     padding: 10px;
+    overflow-y: scroll;
 }
 .navbar{
     margin: 0;
@@ -128,6 +134,7 @@ footer {
   border: 1px solid #006494;
   border-radius: 10px;
 }
+
 .contentleft{
   height:80%;
 }
