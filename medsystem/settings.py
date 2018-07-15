@@ -45,6 +45,7 @@ INSTALLED_APPS = (
     'purchase',
     'supplier',
     'ckeditor',
+    'stockreturn',
 )
 
 MIDDLEWARE_CLASSES = [

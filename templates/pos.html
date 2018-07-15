@@ -1,0 +1,36 @@
+{% extends 'master/index.html' %}
+{% load staticfiles %}
+{% block title %} POS {% endblock %}
+{% block heading %} <p> POS </p> {% endblock %}
+{% block content %}
+<div class="contentleft col-md-9">
+<table class="table table-striped table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>S.No</th>
+      <th>Product</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Tax rate</th>
+      <th>Discount</th>
+      <th>Subtotal</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  </tbody>
+</table>
+</div>
+<div class="contentright col-md-3">
+  <button type="button" class="btn btn-primary btn-lg">Payment</button>
+  <button type="button" class="btn btn-primary btn-lg">Print bill</button>
+  <button type="button" class="btn btn-primary btn-lg">Cancel</button>
+</div>
+<div class="contentbottom col-md-9">
+  <div class="tot col-md-6">
+  <h4>Total :</h4>
+  </div>
+  <div class="totprice col-md-6">
+  </div>
+</div>
+{% endblock %}
