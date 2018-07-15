@@ -24,12 +24,17 @@ def addpurchase(request):
             return render(request,'addpurchase.html',{'form':form})
 
 def purchase_update(request,id):
-    purchase_ = Purchase.objects.get(id=id)
-    form= AddPurchaseForm(request.POST or None,instance=purchase_)
-    if form.is_valid():
-        form.save()
-        return redirect('purchase')
-    context={
-    'form':form,
-    }
-    return render(request,'purchase_update.html',context)
+     if request.POST:
+        form= AddPurchaseForm(request.POST)
+        if form.is_valid():
+            purchase = Purchase.objects.get(pk=id)
+            form= AddPurchaseForm(request.POST or None,instance=purchase)
+            form.save()
+            return redirect('purchase')
+        else:
+            purchase = Purchase.objects.get(pk=id)
+            form= AddPurchaseForm(instance=purchase)
+            context={
+            'form':form
+            }
+            return render(request,'purchase_update.html',context)

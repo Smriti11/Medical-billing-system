@@ -19,23 +19,10 @@
   </thead>
   <tbody>
 
-    {% for pur in purchase_ %}
-    <tr>
-      <td>{{pur.product_id}}</td>
-      <td>{{pur.product_name}}</td>
-      <td>{{pur.prodct_price}}</td>
-      <td>{{pur.currrent_stock}}</td>
-      <td>{{pur.purchase_date}}</td>
-      <td>{{pur.supplier}}</td>
-      <td>{{pur.quantity}}</td>
-      <td>{{pur.tax_rate}}</td>
-      <td>{{pur.discount}}</td>
-    </tr>
-    {% endfor %}
+  <form method="post" action="{% url 'purchase_update' %}">
+    {{form.as_p}}
+    {% csrf_token %}
     <button type="submit" class="btn btn-warning btn-xs"><i class="fas fa-edit"></i></button>
-    <form method="post" action="{% url 'purchase_update' %}">
-      {{form.as_p}}
-      {% csrf_token %}
   </form>
   </tbody>
 </table>
