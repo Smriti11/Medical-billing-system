@@ -1,0 +1,13 @@
+{% extends 'master/index.html' %}
+{% load staticfiles %}
+
+{% block title %} Stockreturn List {% endblock %}
+{% block heading %} <p> Stockreturn-List </p> {% endblock %}
+{% block content %}
+<form method="post">
+  {{form.as_p}}
+  {% csrf_token %}
+  <button type="submit" class="btn btn-warning btn-xs"><i class="fas fa-edit"></i></a>
+
+</form>
+{% endblock %}

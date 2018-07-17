@@ -4,6 +4,9 @@
 {% block heading %} <p> Purchase-List </p> {% endblock %}
 {% block content %}
 <table class="table table-striped table-bordered table-hover" id="myData">
+  <div class="addbutton">
+    <a href="{% url 'addpurchase' %}" class="btn btn-primary btn-lg">ADD</a>
+  </div>
   <thead>
     <tr>
       <th>Code</th>

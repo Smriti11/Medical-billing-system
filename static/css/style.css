@@ -38,7 +38,9 @@ a{
     color: white;
 
 }
-
+.myinput{
+  width: 50% !important;
+}
 .brand {
     background-color: #247ba0;
     color: white;
