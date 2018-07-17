@@ -12,6 +12,21 @@ def pos(request):
     return render(request,'pos.html')
 
 def addproduct(request):
+   if request.method=="GET":
+       context={
+       'form':AddProductsForm(),
+       }
+       return render(request,'addprod.html',context)
+   else:
+       form = AddProductsForm(request.POST)
+       if form.is_valid():
+           pur = form.save(commit= True)
+           pur.save()
+           return redirect('products')
+       else:
+           return render(request,'addprod.html',{'form':form})
+
+def addproduct(request):
     if request.method=="GET":
         context={
         'form':AddProductsForm(),

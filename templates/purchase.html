@@ -32,7 +32,7 @@
       <td>{{pur.discount}}</td>
       <td>
         <a href="{% url 'purchase_update' pur.id %}" class="btn btn-warning btn-xs"><i class="fas fa-edit"></i></a>
-        <a href="#" class="btn btn-warning btn-xs"><i class="fas fa-trash-alt"></i></a>
+        <a href="{% url 'purchase_delete' pur.id %}" class="btn btn-warning btn-xs"><i class="fas fa-trash-alt"></i></a>
       </td>
     </tr>
     {% endfor %}

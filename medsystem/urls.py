@@ -10,5 +10,7 @@ urlpatterns = [
     url(r'^account/', include('account.urls')),
     url(r'^products/', include('products.urls')),
     url(r'^purchase/', include('purchase.urls')),
+    url(r'^supplier/', include('supplier.urls')),
+    url(r'^stockreturn/', include('stockreturn.urls')),
 
 ]

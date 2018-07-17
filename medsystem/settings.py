@@ -41,8 +41,9 @@ INSTALLED_APPS = (
     'account',
     'widget_tweaks',
     'products',
-    'django_tables2',
     'purchase',
+    'supplier',
+    'stockreturn',
 )
 
 MIDDLEWARE_CLASSES = [
