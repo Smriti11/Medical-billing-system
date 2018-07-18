@@ -1,15 +1,21 @@
 {% extends 'master/index.html' %}
 {% load staticfiles %}
+{% load widget_tweaks %}
 {% block title %} Add product {% endblock %}
 {% block heading %} <p> Add product </p> {% endblock %}
 {% block content %}
 <div class="prodaddform">
-<form method="POST" action="{% url 'addproduct' %}">
-  <table>
-  {{form.as_table}}
-  {% csrf_token %}
-  </table>
-  <button type="submit" class="btn btn-primary">ADD</button>
-</form>
+  <form method="POST" action="{% url 'addproduct' %}">
+      {% for field in form %}
+      <label for="basic-url">{{ field.label_tag }}</label>
+      <div class="input-group myinput">
+        {{ field|add_class:"form-control"}}
+      </div>
+
+      {% endfor %}
+      {% csrf_token %}
+      <br/>
+    <button type="submit" class="btn btn-primary">ADD</button>
+  </form>
 </div>
 {% endblock %}

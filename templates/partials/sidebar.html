@@ -9,11 +9,8 @@
             <a href="#" data-target="#item2" data-toggle="collapse"><i class="fa fa-barcode"></i> <span class="collapse in hidden-xs">Inventory <span class="caret"></span></span></a>
             <ul class="nav nav-stacked collapse" id="item2">
                 <li><a href="{% url 'products' %}">o List</a></li>
-                <li><a href="{% url 'addproduct' %}">o Add Product</a></li>
                 <li><a href="{% url 'purchase' %}">o Purchase</a></li>
-                <li><a href="{% url 'addpurchase' %}">o Add Purchase</a></li>
-                <li><a href="#">o Stock Return</a></li>
-                <li><a href="#">o Add Stock Return Item</a></li>
+                <li><a href="{% url 'stockreturn' %}">o Stock Return</a></li>
             </ul>
         </li>
         <li>
@@ -28,8 +25,7 @@
         <li>
           <a href="#" data-target="#item" data-toggle="collapse"><i class="fa fa-male"></i> <span class="collapse in hidden-xs">Suppliers <span class="caret"></span></span></a>
           <ul class="nav nav-stacked collapse left-submenu" id="item">
-              <li><a href="#">o List Suppliers</a></li>
-              <li><a href="#">o Add Suppliers</a></li>
+              <li><a href="{% url 'supplier' %}">o List Suppliers</a></li>
           </ul>
         </li>
         <li><a href="#"><i class="fa fa-cart-plus"></i> <span class="collapse in hidden-xs">Sales</span></a></li>

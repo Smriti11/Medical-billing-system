@@ -1,5 +1,6 @@
 {% extends 'master/index.html' %}
 {% load staticfiles %}
+
 {% block title %} Purchase List {% endblock %}
 {% block heading %} <p> Purchase-List </p> {% endblock %}
 {% block content %}
@@ -9,5 +10,5 @@
         {% csrf_token %}
         <button type="submit" class="btn btn-warning btn-xs"><i class="fas fa-edit"></i></button>
       </form>
-    
+
 {% endblock %}
