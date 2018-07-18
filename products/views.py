@@ -12,9 +12,6 @@ def products(request):
     }
     return render(request,'products.html',context)
 
-@login_required (login_url = '/login/')
-def pos(request):
-    return render(request,'pos.html')
 
 @login_required (login_url = '/login/')
 def addproduct(request):
