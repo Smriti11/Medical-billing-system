@@ -26,8 +26,8 @@ def addproduct(request):
    else:
        form = AddProductsForm(request.POST)
        if form.is_valid():
-           pur = form.save(commit= True)
-           pur.save()
+           p = form.save(commit= True)
+           p.save()
            return redirect('products')
        else:
            return render(request,'addprod.html',{'form':form})
