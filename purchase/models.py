@@ -5,9 +5,9 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Purchase(models.Model):
-        product_id=models.CharField(max_length=30)
-        product_name=models.CharField(max_length=30)
-        prodct_price=models.IntegerField()
+        prod_code=models.IntegerField()
+        product_name=models.CharField(max_length=30, blank = 'True')
+        product_price=models.IntegerField()
         currrent_stock=models.IntegerField()
         purchase_date=models.DateField()
         supplier=models.CharField(max_length = 30, blank = 'True')
