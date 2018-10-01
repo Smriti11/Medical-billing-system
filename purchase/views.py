@@ -8,7 +8,7 @@ from django.contrib.auth.decorators import login_required
 @login_required (login_url = '/login/')
 def purchase(request):
     context={
-    'purchase':Purchase.objects.all()
+    'purchase_':Purchase.objects.all()
     }
     return render(request,'purchase.html',context)
 

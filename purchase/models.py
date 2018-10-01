@@ -1,20 +1,21 @@
 from django.db import models
 from django.contrib.auth.models import User
-#from supplier .models import Supplier
+from products.models import Products
+from supplier.models import Supplier
+
 
 # Create your models here.
 
 class Purchase(models.Model):
-        prod_code=models.IntegerField()
-        product_name=models.CharField(max_length=30, blank = 'True')
-        product_price=models.IntegerField()
+        prod_id=models.ForeignKey(Products)
         currrent_stock=models.IntegerField()
         purchase_date=models.DateField()
-        supplier=models.CharField(max_length = 30, blank = 'True')
+        supplier=models.ForeignKey(Supplier)
         quantity=models.IntegerField()
         tax_rate=models.IntegerField()
         discount=models.IntegerField()
 
 
+
         def __str__(self):
-            return self.product_name
+            return self.prod_id
